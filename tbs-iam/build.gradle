@@ -1,0 +1,23 @@
+apply plugin: 'java-library'
+apply plugin: 'io.spring.dependency-management'
+
+description = 'tbs-iam'
+
+dependencyManagement {
+    imports {
+        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+    }
+}
+
+dependencies {
+    api 'org.springframework.boot:spring-boot-starter-web'
+    api 'org.springframework.boot:spring-boot-starter-security'
+    api 'io.jsonwebtoken:jjwt-api:0.12.3'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
+    
+    // 依赖 tbs-orm 和 tbs-redis
+    implementation project(':tbs-orm')
+    implementation project(':tbs-redis')
+}
+

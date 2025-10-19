@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+description = 'tbs-app'
+
+dependencies {
+    // 依赖所有其他模块
+    implementation project(':tbs-orm')
+    implementation project(':tbs-redis')
+    implementation project(':tbs-iam')
+    
+    // Spring Boot Web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    
+    // MySQL 驱动
+    runtimeOnly 'com.mysql:mysql-connector-j'
+}
+
+// 配置 Spring Boot 打包
+bootJar {
+    enabled = true
+    archiveFileName = "${project.name}-${project.version}.jar"
+}
+
+jar {
+    enabled = false
+}
+
