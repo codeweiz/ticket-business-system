@@ -1,7 +1,7 @@
 apply plugin: 'java-library'
 apply plugin: 'io.spring.dependency-management'
 
-description = 'tbs-redis'
+description = 'tbs-common'
 
 dependencyManagement {
     imports {
@@ -10,7 +10,6 @@ dependencyManagement {
 }
 
 dependencies {
-    api 'org.springframework.boot:spring-boot-starter-data-redis'
-    api 'org.apache.commons:commons-pool2'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.apache.commons:commons-pool2'
 }
-

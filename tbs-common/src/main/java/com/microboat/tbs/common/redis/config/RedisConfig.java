@@ -1,4 +1,4 @@
-package com.microboat.tbs.redis.config;
+package com.microboat.tbs.common.redis.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

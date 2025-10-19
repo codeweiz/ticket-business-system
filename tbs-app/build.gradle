@@ -6,8 +6,8 @@ description = 'tbs-app'
 
 dependencies {
     // 依赖所有其他模块
+    implementation project(':tbs-common')
     implementation project(':tbs-orm')
-    implementation project(':tbs-redis')
     implementation project(':tbs-iam')
     
     // Spring Boot Web

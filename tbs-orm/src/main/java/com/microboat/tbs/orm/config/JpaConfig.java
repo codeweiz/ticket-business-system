@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.microboat.tbs.orm.repository")
+@EnableJpaRepositories(basePackages = "com.microboat.tbs.orm.repo")
 @EntityScan(basePackages = "com.microboat.tbs.orm.entity")
 public class JpaConfig {
     

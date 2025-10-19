@@ -1,10 +1,10 @@
 rootProject.name = 'ticket-business-system'
 
 // 基础设施模块
-include 'tbs-orm'      // ORM 数据访问层
-include 'tbs-redis'    // Redis 缓存层
+include 'tbs-common'      // COMMON 公共依赖层
 
 // 业务模块
+include 'tbs-orm'      // ORM 数据访问层
 include 'tbs-iam'      // 身份认证与授权模块
 
 // 应用模块
