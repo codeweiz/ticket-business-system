@@ -13,7 +13,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @author microboat
  */
 @Configuration
-public class RedisConfig {
+public class TbsCommonRedisConfiguration {
     
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {

@@ -1,6 +1,7 @@
 package com.microboat.tbs.common.config;
 
-import com.microboat.tbs.common.redis.config.RedisConfig;
+import com.microboat.tbs.common.orm.config.TbsCommonOrmConfiguration;
+import com.microboat.tbs.common.redis.config.TbsCommonRedisConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
@@ -10,7 +11,8 @@ import org.springframework.context.annotation.Import;
  * @author microboat
  */
 @Import({
-        RedisConfig.class
+        TbsCommonOrmConfiguration.class,
+        TbsCommonRedisConfiguration.class
 })
 @Configuration
 public class TbsCommonConfiguration {
